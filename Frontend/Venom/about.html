@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>О фильме</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logoLink">
+            <img width="46" height="71" src="images/logo.png" alt="Logo: Venom" class="logoImage">
+        </a>
+        <nav class="nav">
+            <button class="menuButton">
+                <span class="menuButtonText">Меню</span>
+                <img src="images/menu.svg" alt="Icon: Burger menu" class="menuButtonIcon">
+            </button>
+            <button class="menuClose">
+                <span class="menuCloseText">Закрыть</span>
+                <img src="images/close.svg" alt="Icon: Close" class="menuCloseIcon">
+            </button>
+            <ul class="navMenu">
+                <li class="navMenuItem">
+                    <a href="about.html" class="navMenuLink">О фильме</a>
+                </li>
+                <li class="navMenuItem">
+                    <a href="trailer.html" class="navMenuLink">Трейлер</a>
+                </li>
+                <li class="navMenuItem">
+                    <a href="actors.html" class="navMenuLink">Актеры</a>
+                </li>
+                <li class="navMenuItem">
+                    <a href="premiere.html" class="navMenuLink">Премьера</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="contentLeft">
+            <h2 class="contentTitle">О фильме</h2>
+            <p class="contentText">В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного суперзлодея из комиксов Marvel.</p>
+            <h3 class="contentSubtitle">В главных ролях </h3>
+            <ul class="list">
+                <li class="listItem">Том Харди</li>
+                <li class="listItem">Мишель Уильямс</li>
+                <li class="listItem">Вуди Харрельсон</li>
+                <li class="listItem">Наоми Харрис</li>
+                <li class="listItem">Стивен Грэм</li>
+                <li class="listItem">Рейд Скотт</li>
+                <li class="listItem">Эд Кейр</li>
+                <li class="listItem">Шон Делани</li>
+                <li class="listItem">Уилльям Барбо</li>
+                <li class="listItem">Пегги Лу</li>
+            </ul>
+            <div class="trailer">
+                <a data-fancybox href="https://www.youtube.com/watch?v=Othd8W8o3t0&ab_channel=SonyPicturesRU" class="play">
+                    <img src="images/trailerPlay.svg" alt="Icon: play" class="playIcon">
+                </a>
+            </div>
+        </div>
+        <!-- /.contentLeft -->
+        
+        <div class="contentRight">
+            <img src="images/poster.jpg" alt="Photo: poster" class="poster">
+            <div class="creators">
+                <h3 class="contentSubtitle">Режиссер</h3>
+                <ul class="list">
+                    <li class="listItem">Энди Серкис</li>
+                </ul>
+                <h3 class="contentSubtitle">Сценарий</h3>
+                <ul class="list">
+                    <li class="listItem">Келли Марсел</li>
+                    <li class="listItem">Том Харди</li>
+                </ul>
+                <h3 class="contentSubtitle">Продюсеры</h3>
+                <ul class="list">
+                    <li class="listItem">Ави Арад</li>
+                    <li class="listItem">Том Харди</li>
+                    <li class="listItem">Келли Марсел</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.contentRight -->
+    </div>
+    <!-- /.content -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

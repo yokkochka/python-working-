@@ -1,0 +1,68 @@
+/*Главная часть*/
+
+.mainPart {
+    padding: 5%;
+    margin: 0 -3%;
+}
+
+.courseCollection {
+    display: inline-block;
+    margin: 4%;
+    width: 15vw;
+    height: 15vw;
+    position: relative;
+    
+}
+.courseCollection>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dimming {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background: linear-gradient(0deg,#000,transparent 52%)
+}
+
+.courseInformation {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+.courseInformation>a:hover {
+    border-color: #fff;
+}
+
+.courseInformation>a {
+    border-bottom: 3px solid transparent;
+    display: block;
+}
+
+/*Адаптация*/
+@media (max-width: 768px) {
+    .courseCollection {
+        margin: 10px 15px; 
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .courseCollection {
+        width: 200px;
+        height: 200px; 
+    }
+}
+
+@media (max-width: 320px) {
+    .courseCollection {
+        width: 130px;
+        height: 130px;
+    }
+}

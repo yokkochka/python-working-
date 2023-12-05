@@ -1,0 +1,112 @@
+/*Главная часть*/
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 5%;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    
+    padding: 150px 0;
+    margin: 0 -20px;
+}
+
+.picture {
+    flex: 1 1 auto;
+    margin: 0 20px;
+    max-width: 43vw;
+
+    position: relative;
+}
+
+.picture::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 3;
+    background: linear-gradient(0deg,#000,transparent 52%);
+}
+
+.picture>img {
+    width: 100%;
+    display: inline-block;
+}
+
+.courseDescription {
+    flex: 1 1 40%;
+    margin: 0 20px;
+}
+
+.courseDescription>p {
+    color: #000;
+}
+
+.button {
+    background-color: rgba(50, 5, 113, 0.8);
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 20vw;
+    height: 8vh;
+    margin-top: 5%;
+}
+
+.button:hover {
+    background-color: rgba(50, 5, 113, 0.4);
+}
+
+/*Адаптация*/
+
+@media (max-width: 1280px) {
+    .card {
+        margin: 0 -10px;
+    }
+    .picture {
+        margin: 0 10px;
+    }
+    .courseDescription {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        margin: 0 -15px;
+    }
+    .picture {
+        margin: 0 15px;
+    }
+    .courseDescription {
+        margin: 0 15px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 0;
+    }
+    .picture {
+        margin: 0;
+    }
+    .courseDescription {
+        margin: 0;
+    }
+    .picture {
+        display: none;
+    }
+}

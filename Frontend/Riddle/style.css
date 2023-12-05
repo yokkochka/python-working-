@@ -1,0 +1,169 @@
+@keyframes SquareMove {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+/*Главный фрейм*/
+main {
+    height: 90vh;
+
+    background-image: url("images/BackgroundMain.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 45vw;
+   
+    position: relative;
+}
+
+.letter {
+    color: #45036F;
+    text-shadow: 1px 2px 9px #976BD6;
+    font-size: 45px;
+    font-weight: 600;
+    padding: 10px 4vw;
+}
+
+.letter:nth-child(odd) {
+    animation: SquareMove 2s ease-out infinite alternate;
+}
+
+.letter:nth-child(even) {
+    animation: SquareMove 2s ease-out infinite alternate;
+    animation-delay: 3s;
+}
+
+.logoAnimation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+}
+
+.logoAnimationLeft {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logoAnimationRight {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reference {
+    width: 100vw;
+    height: auto;
+
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 3%;  
+}
+
+.about {
+    background-color: rgba(50, 5, 113, 0.8);
+    max-width: 50vw;
+    margin: 3%;
+    padding: 1%;
+}
+
+.signUp {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: rgba(50, 5, 113, 0.8);
+    border-radius: 100px;
+    padding: 10px 5%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.signUp:hover {
+    background-color: rgba(50, 5, 113, 0.4);
+}
+
+/*Второстепенный фрейм*/
+
+.aboutMain {
+    background-color: rgba(50, 5, 113, 0.2);
+    padding: 5%;
+}
+
+.textAbout {
+    padding: 5%;
+    margin: auto;
+}
+
+.textAbout>p {
+    color: #000;
+}
+
+/*Адаптация*/
+@media (max-width: 1280px) {
+    .letter {
+        font-size: 38px;
+    }
+    main {
+        height: 530px;
+        background-size: 610px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .letter {
+        font-size: 35px;
+    }
+    main {
+        height: 450px;
+        background-size: 530px;
+    }
+}
+
+@media (max-width: 768px) {
+    .letter {
+        font-size: 30px;
+    }
+    main {
+        height: 390px;
+        background-size: 455px;
+    }
+}
+
+@media (max-width: 600px) {
+    .letter {
+        font-size: 25px;
+    }
+    main {
+        height: 390px;
+        background-size: 455px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .letter {
+        font-size: 22px;
+    }
+    main {
+        height: 300px;
+        background-size: 380px;
+    }
+}
+
+@media (max-width: 320px) {
+    .letter {
+        font-size: 19px;
+    }
+    main {
+        height: 290px;
+        background-size: 310px;
+    }
+}
