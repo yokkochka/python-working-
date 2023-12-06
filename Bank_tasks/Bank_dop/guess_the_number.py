@@ -25,4 +25,3 @@ if win == False:
     print('Поражение...')
 
 
-    # lklklk
