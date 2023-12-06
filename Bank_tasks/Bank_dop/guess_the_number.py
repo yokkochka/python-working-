@@ -23,3 +23,6 @@ while count <= 5 and win == False:
 
 if win == False:
     print('Поражение...')
+
+
+    # lklklk
