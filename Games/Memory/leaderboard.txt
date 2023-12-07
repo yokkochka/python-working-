@@ -1,0 +1,6 @@
+Alice: 10
+Bob: 8
+Charly: 6
+David: 5
+Eva: 3
+Jon: 2
