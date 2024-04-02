@@ -237,7 +237,6 @@ def draw_board(board, boxes):
             else:    # Если карточка откыта
                 shape, color = shape_and_color(board, i, j)
                 draw_icon(color, shape, i, j)
-                
 
 
 
@@ -249,13 +248,14 @@ def left_top_coord(i, j):
     #print(left, top)
     return (left, top)
 
+
 def shape_and_color(board, i, j):
     # В board обращаемся к нужной ячейке, в ней кортеж (shape, color)  
     return board[i][j][0], board[i][j][1]
 
 
 def draw_icon(shape, color, i, j):
-    left, top = left_top_coord(i, j)    #узнаем координату ячейки 
+    left, top = left_top_coord(i, j)    # Узнаем координату ячейки 
     # В зависимости от формы отрисовываем нужную фигуру
     if shape == DISK:
         pygame.draw.circle(WIN, color, (left + 20, top + 20), 17)
@@ -269,7 +269,6 @@ def draw_icon(shape, color, i, j):
         pygame.draw.polygon(WIN, color, [[left+20, top+5], [left+5, top+35], [left+35, top+35]])
     elif shape == HEART:
         pygame.draw.polygon(WIN, color, [[left+20, top+35], [left+5, top+20], [left+5, top+15], [left+10, top+10], [left+15, top+10], [left+20, top+16], [left+25, top+10], [left+30, top+10], [left+35, top+15], [left+35, top+20]])
-
 
 
 def opening_cards_at_the_beginning(board):

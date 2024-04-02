@@ -253,11 +253,187 @@
 # print(result)
 
 
+# import matplotlib.pyplot as plt
+# import numpy as np
 
-# a = 'веселиться'
-# print(a[:5])
-# print(a[4:])
+# # Значения импульсной характеристики
+# n = np.array([0, 1, 2])
+# h_n = np.array([3/4, 5/4, 5.3/4])
 
-# print(a[::2])
+# # Построение графика
+# plt.stem(n, h_n, basefmt='b', markerfmt='bo', linefmt='b-')
+# plt.title('Импульсная характеристика')
+# plt.xlabel('n')
+# plt.ylabel('h[n]')
+# plt.grid(True)
+# plt.show()
 
-''''''''''''''''
+
+
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# # Значения импульсной характеристики
+# n = np.arange(0, 10)
+# h_n = (1/4) * (2/3)**n - (1/4) * (3/2)**n
+
+# # Построение графика
+# plt.stem(n, h_n, basefmt='b', markerfmt='bo', linefmt='b-')
+# plt.title('Импульсная характеристика')
+# plt.xlabel('n')
+# plt.ylabel('h[n]')
+# plt.grid(True)
+# plt.show()
+
+
+
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# # Частоты для анализа
+# omega = np.linspace(0, 2*np.pi, 1000)
+
+# # Передаточная функция
+# H = (3 + 5*np.exp(-1j*omega) + 5.3*np.exp(-2j*omega)) / (4*np.exp(-2j*omega) + 8*np.exp(-1j*omega) + 4)
+
+# # АЧХ и ФЧХ
+# magnitude = np.abs(H)
+# phase = np.angle(H, deg=True)  # в градусах
+
+# # Построение графиков
+# plt.figure(figsize=(12, 6))
+
+# # АЧХ
+# plt.subplot(2, 1, 1)
+# plt.plot(omega, magnitude)
+# plt.title('АЧХ')
+# plt.xlabel('Частота (рад/с)')
+# plt.ylabel('|H(jω)|')
+# plt.grid(True)
+
+# # ФЧХ
+# plt.subplot(2, 1, 2)
+# plt.plot(omega, phase)
+# plt.title('ФЧХ')
+# plt.xlabel('Частота (рад/с)')
+# plt.ylabel('Фаза (градусы)')
+# plt.grid(True)
+
+# plt.tight_layout()
+# plt.show()
+
+
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# # Частоты для анализа
+# omega = np.linspace(0, 2*np.pi, 1000)
+
+# # Передаточная функция
+# H = (1 + 3*np.exp(-1j*omega)) / (6.4 + 9*np.exp(-1j*omega) + 6*np.exp(-2j*omega))
+
+# # АЧХ и ФЧХ
+# magnitude = np.abs(H)
+# phase = np.angle(H, deg=True)  # в градусах
+
+# # Построение графиков
+# plt.figure(figsize=(12, 6))
+
+# # АЧХ
+# plt.subplot(2, 1, 1)
+# plt.plot(omega, magnitude)
+# plt.title('АЧХ')
+# plt.xlabel('Частота (рад/с)')
+# plt.ylabel('|H(jω)|')
+# plt.grid(True)
+
+# # ФЧХ
+# plt.subplot(2, 1, 2)
+# plt.plot(omega, phase)
+# plt.title('ФЧХ')
+# plt.xlabel('Частота (рад/с)')
+# plt.ylabel('Фаза (градусы)')
+# plt.grid(True)
+
+# plt.tight_layout()
+# plt.show()
+
+
+# n = int(input("Введите четырехзначное число: "))
+# summa = (n//1000) + (n% 1000 // 100) + (n % 100 // 10) + (n % 10)
+
+# if 0 <= summa <= 9:
+#     print("Минимальный ранг") 
+# elif 10 <= summa <= 18:
+#     print("Малый ранг") 
+# elif 19 <= summa <= 27:
+#     print("Средний ранг") 
+# elif 28 <= summa <= 36:
+#     print("Высший ранг") 
+
+
+# # filsbmvqelk
+# # ebiil
+
+# alf = 'abcdefghijklmnopqrstuvwxyz'
+# stroka = input("Введите зашифрованную строку: ")
+
+# # print(alf[alf.find("o")-3])
+# for i in stroka:
+#     print(alf[alf.find(i)+3], end="")
+
+# summa = 0
+# .... 
+# summa += 1
+
+
+# import numpy as np
+# import matplotlib.pyplot as plt
+# from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+
+# # Задаем временной ряд
+# temperatures = np.array([25, 28, 30, 29, 27, 24, 22])
+
+# # Строим ACF и NACF
+# # plot_acf(temperatures, lags=6, title='Autocorrelation Function (ACF)')
+# # plt.show()
+
+# plot_pacf(temperatures, lags=2, title='Partial Autocorrelation Function (PACF)')
+# plt.show()
+
+
+
+
+# n= int(input('Введите кол-во учеников: '))
+# spisok = []
+
+# for i in range(n):
+#     spisok.append(input("Введите ФИ и оценки по 3 предметам: ").strip())
+
+# sr_m = 0
+# sr_f = 0
+# sr_i = 0
+
+# for i in range(n):
+#     dop = spisok[i].split()
+#     print(dop)
+#     sr_m += int(dop[2])
+#     sr_f += int(dop[3])
+#     sr_i += int(dop[4])
+
+
+# # print(sr_m/n, sr_f/n, sr_i/n)
+
+
+
+# stroka = 'sshdff'
+# counter = 0
+# for i in stroka:
+#     if i == 'f':
+#         counter += 1
+
+# print(counter)
+
