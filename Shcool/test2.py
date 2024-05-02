@@ -69,22 +69,70 @@
 
 
 
-
-n = '3555'
-m = 3
-summa = 0
-for i in range(2000):
-    n = n + '5'
-    m += 1
-    while "25" in n or '355' in n or '555' in n:
-        if '25' in n:
-            n = n.replace("25", "3", 1)
-        elif '355' in n:
-            n = n.replace('355', '52', 1)
-        elif '555' in n:
-            n = n.replace('555', '23', 1)
-    summa = n.count('2')* 2 + n.count('3')*3 + n.count('5')* 5
+# n = '3555'
+# m = 3
+# summa = 0
+# for i in range(2000):
+#     n = n + '5'
+#     m += 1
+#     while "25" in n or '355' in n or '555' in n:
+#         if '25' in n:
+#             n = n.replace("25", "3", 1)
+#         elif '355' in n:
+#             n = n.replace('355', '52', 1)
+#         elif '555' in n:
+#             n = n.replace('555', '23', 1)
+#     summa = n.count('2')* 2 + n.count('3')*3 + n.count('5')* 5
     
-    if summa == 27:
-        print(m)
+#     if summa == 27:
+#         print(m)
+#         break
+
+
+# import matplotlib.pyplot as plt
+
+# # Создаем структурную схему
+# def draw_decoder_structure():
+#     fig, ax = plt.subplots(figsize=(8, 6))
+#     ax.axis('off')  # Отключаем отображение осей
+
+#     # Рисуем блоки
+#     blocks = [
+#         {"name": "Входные данные", "position": (0.1, 0.9)},
+#         {"name": "Извлечение информации", "position": (0.1, 0.7)},
+#         {"name": "Генерация проверочных символов", "position": (0.1, 0.5)},
+#         {"name": "Проверка ошибок", "position": (0.1, 0.3)},
+#         {"name": "Коррекция ошибок", "position": (0.1, 0.1)},
+#         {"name": "Выходные данные", "position": (0.1, -0.1)}
+#     ]
+
+#     for block in blocks:
+#         ax.text(block["position"][0], block["position"][1], block["name"],
+#                 fontsize=12, ha='left', va='center', bbox=dict(facecolor='lightgray', edgecolor='black', boxstyle='round,pad=0.5'))
+
+#     # Рисуем стрелки между блоками
+#     for i in range(len(blocks) - 1):
+#         ax.annotate('', xy=blocks[i + 1]["position"], xytext=blocks[i]["position"],
+#                     arrowprops=dict(facecolor='black', arrowstyle='->'))
+
+#     plt.title('Структурная схема декодера')
+#     plt.show()
+
+# # Рисуем структурную схему декодера
+# draw_decoder_structure()
+
+# a = 0
+# if a:
+#     print('True')
+# else:
+#     print("False")
+
+
+# Проверяем все ли числа положительны
+my_list = [1, 2, 3, 4, 5, 10, 0, 3, 2]
+for i in my_list:
+    if i < 0:
+        print("В списке не все числа положительные")
         break
+else:
+    print('Все числа положительные')
