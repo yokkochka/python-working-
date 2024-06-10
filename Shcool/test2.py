@@ -128,8 +128,25 @@
 #     print("False")
 
 
+# Проверка на четность
 
-my_tuple = ([1, 2, 3], "dog", [[88, 99, [23, "cat", 32]],{"a", "b", "c"}])
 
-a = my_tuple[2][0][2][1]
-print(a)
+# С названием ламбда-функции
+# is_even = lambda x: x % 2 == 0
+
+# pol_input = int(input('Введите число: '))
+# print(is_even(pol_input))
+
+
+
+stroka = 'sfhsfhshhfshggfsf'
+count = 0
+for i in stroka:
+    if i == 'f':
+        count += 1
+print(count)
+
+
+
+
+print(stroka.count('f'))
