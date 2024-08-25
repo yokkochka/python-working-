@@ -1,9 +1,23 @@
-leaks = 1
+a = 3
+b = 1
+
+if 0 < a < 2:
+    print("Переменная а больше переменной b")
+elif b > a:
+    print("Переменная b больше переменной a")
+else:
+    print("Переменные равны")
+    
+# a = 1
+
+# if a % 2 == 0:
+#     print("Число четное")
+# elif a % 2 == 1:
+#     print("Число нечетное")    
 
 
-for i in range(5):
-    if leaks > 0:
-        leaks += 1
-total_leaks = leaks * 10 / 5
-print(total_leaks)
+# a = '123456'
 
+# if :
+    # print("Символ 1 есть в строке")
+    

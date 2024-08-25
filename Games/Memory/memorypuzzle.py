@@ -51,7 +51,7 @@ def main():
     FPSCLOCK = pygame.time.Clock()
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
 
-    mousex = 0 # used to store x coordinate of mouse event
+    mouse_x = 0 # used to store x coordinate of mouse event
     mousey = 0 # used to store y coordinate of mouse event
     pygame.display.set_caption('Memory Game')
 
