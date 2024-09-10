@@ -1,23 +1,18 @@
-a = 3
-b = 1
 
-if 0 < a < 2:
-    print("Переменная а больше переменной b")
-elif b > a:
-    print("Переменная b больше переменной a")
+
+# user_input = 1
+# while user_input != 0:
+#     user_input = int(input("Введиет число: "))
+#     print(user_input**2)
+    
+    
+user_input = int(input("Введите число: "))
+while user_input != 0:
+    if (user_input == -1):
+        break
+    print(user_input ** 2)
+    user_input = int(input("Введите число: "))
 else:
-    print("Переменные равны")
-    
-# a = 1
-
-# if a % 2 == 0:
-#     print("Число четное")
-# elif a % 2 == 1:
-#     print("Число нечетное")    
+    print("Программа завершилась аварийно! Будте внимательнее!")
 
 
-# a = '123456'
-
-# if :
-    # print("Символ 1 есть в строке")
-    

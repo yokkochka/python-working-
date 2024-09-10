@@ -244,8 +244,6 @@ class Game:
         img = img[:count_imgs] * 2 
         rnd.shuffle(img) 
 
-
-
         board = []
         for _ in range(self.COUNTS_CARDS_X):    
             column = []   
