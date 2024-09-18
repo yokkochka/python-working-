@@ -258,23 +258,63 @@
 
 
 
-from turtle import *
-from time import sleep
+# from turtle import *
+# from time import sleep
  
-pen = Pen()
-pen.goto(0,0)
-pen.left(90)
-k = 20
-for i in range(7):
-    pen.forward(10*k)
-    pen.right(120)
-# print(pen.distance(0, 0))
+# pen = Pen()
+# pen.goto(0,0)
+# pen.left(90)
+# k = 20
+# for i in range(7):
+#     pen.forward(10*k)
+#     pen.right(120)
+# # print(pen.distance(0, 0))
 
-for i in range(0, 12):
-    for j in range(0, 12):
-        pen.up()
-        pen.goto(i*k,j*k)
-        pen.down()
-        pen.dot(10//2)
+# for i in range(0, 12):
+#     for j in range(0, 12):
+#         pen.up()
+#         pen.goto(i*k,j*k)
+#         pen.down()
+#         pen.dot(10//2)
 
-sleep(1000)
+# sleep(1000)
+
+
+
+# str = 'hello world'
+# counter = 0
+
+# for i in str:
+#     if i == 'l':
+#         counter += 1
+        
+# print(counter)
+
+
+# if 'l' in str:
+#     print("Символ l есть в строке")
+
+
+# def name(a="Guest"):
+#     print(f"Твое имя: {a}")
+
+# a = input("Введите свое имя: ")
+# name()
+
+
+# 5! = 1*2*3*4*5
+# 3! = 1*2*3
+
+
+
+def factorial(number):
+    if (number == 1):
+        return 1
+    return number * factorial(number-1)
+
+
+
+
+number = int(input("Факториал какого числа нужно вычислить: "))
+fact = factorial(number)
+print(fact)
