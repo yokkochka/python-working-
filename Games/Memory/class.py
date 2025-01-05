@@ -10,7 +10,7 @@ class Game:
         self.WIN_WIDTH = 640 
         self.WIN_HEIGHT = 480
 
-        self.FPS = 30   # Переменная для фпс
+        self.FPS = 30    # Переменная для фпс
 
         # Цвета
         self.LIGHTBLUE = (151, 157, 226)
@@ -208,8 +208,10 @@ class Game:
                                 assert(self.COUNTS_CARDS_X*self.COUNTS_CARDS_Y)%2 == 0, 'Error'
 
                                 # Высчитываем отступы между окном и доской
-                                self.X_INDENTS = int((self.WIN_WIDTH - (self.COUNTS_CARDS_X * (self.BOX_SIZE + self.INDENTS))) / 2)
-                                self.Y_INDENTS = int((self.WIN_HEIGHT - (self.COUNTS_CARDS_Y * (self.BOX_SIZE + self.INDENTS))) / 2)
+                                self.X_INDENTS = int((self.WIN_WIDTH - (self.COUNTS_CARDS_X * \
+                                                                        (self.BOX_SIZE + self.INDENTS))) / 2)
+                                self.Y_INDENTS = int((self.WIN_HEIGHT - (self.COUNTS_CARDS_Y * \
+                                                                        (self.BOX_SIZE + self.INDENTS))) / 2)
                         
                             
                             # Запускаем игру заново:

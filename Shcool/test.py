@@ -437,4 +437,8 @@
 
 # print(counter)
 
-test = 101
+my_test = 101
+
+def say_hello():
+    print('hello')
+

@@ -1,3 +1,4 @@
+
 file_path = '17_3.txt'
 count_par = 0
 max_summa_par = -1
@@ -18,3 +19,6 @@ except FileNotFoundError:
 
 print(count_par)
 print(max_summa_par)
+
+
+

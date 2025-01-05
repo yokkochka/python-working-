@@ -18,3 +18,4 @@ except FileNotFoundError:
 
 print(count_par)
 print(max_summa_par)
+
