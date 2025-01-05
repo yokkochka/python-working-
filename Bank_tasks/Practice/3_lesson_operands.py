@@ -117,3 +117,12 @@ liters_in_the_barrel = barrel - 3 * passes
 print(passes, 'заходов мы совершили,', liters_in_the_barrel, 'осталось в бочке')
 
 
+
+
+x = int(input("Введите значение х: "))
+y = int(input("Введите значение y: "))
+
+
+print(round(((x + y)/(x + 1)) - ((x*y - 12)/(34 + x)), 3))
+
+

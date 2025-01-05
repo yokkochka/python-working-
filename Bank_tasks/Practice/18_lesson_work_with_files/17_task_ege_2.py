@@ -1,3 +1,6 @@
+
+
+
 file_path = '17_2.txt'
 count_troek = 0
 min_summa_troek = 100000000000000000
@@ -28,3 +31,7 @@ except FileNotFoundError:
 
 print(count_troek)
 print(min_summa_troek)
+
+
+
+

@@ -24,3 +24,8 @@ except FileNotFoundError:
 else: 
     print(count)
     print(max_znach)
+
+
+
+
+    
