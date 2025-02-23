@@ -3,7 +3,7 @@ file_path = "file3.txt"
 try:
     file = open(file_path, "a") 
 
-    file.write("Add to the end")
+    file.write("Add to the end\n")
     print("Данные успешно добавлены в файл.")
     file.close()
     

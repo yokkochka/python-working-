@@ -23,10 +23,10 @@ try:
                 count_troek += 1
                 max_summa_elementov = max(max_summa_elementov, sum(troyka))
 
-
 except FileNotFoundError:
     print('Error')
 
-
 print(count_troek)
 print(max_summa_elementov)
+
+

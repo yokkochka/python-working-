@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 for A in range(32):
     B = True
     for x in range(32):
@@ -7,3 +8,19 @@ for A in range(32):
     if B:
         print(A)
         break
+=======
+
+
+
+
+
+test2 = 4
+test11 = 10
+
+
+
+print(test2 + test11)
+print(test2 - test11)
+print(test2 * test11)
+print(test2 / test11)
+>>>>>>> 8ea490cfb7ed03dbcbd92fecee8bd3dcedd4f19c
