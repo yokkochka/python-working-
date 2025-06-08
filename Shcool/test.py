@@ -437,8 +437,13 @@
 
 # print(counter)
 
-my_test = 101
+# my_test = 102
 
-def say_hello():
-    print('hello')
+# def say_hello():
+#     print('hello')
 
+
+
+
+def sqrt():
+    print("Я функция sqrt из модуля test")

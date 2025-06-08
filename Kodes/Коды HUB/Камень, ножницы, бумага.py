@@ -1,7 +1,6 @@
 import time
 import random
 
-# Escribe tu código aquí
 puntaje = 0
 puntajedebot = 0
 
