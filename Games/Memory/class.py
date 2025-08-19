@@ -37,10 +37,10 @@ class Game:
         self.BOX_SIZE = 40      # Размер одной карточки в пикселях
         self.INDENTS = 10    # Отступы между карточками
 
-        self.COUNTS_CARDS_X = 2  # Количество карточек по горизонтали
+        self.COUNTS_CARDS_X = 2    # Количество карточек по горизонтали
         self.COUNTS_CARDS_Y = 2    # Количество карточек по вертикали
 
-        self.BOX_COLOR = self.ROSE   # Цвет для коробочек
+        self.BOX_COLOR = self.ROSE    # Цвет для коробочек
         
         # Формы иконок
         self.DISK = 'disk'
