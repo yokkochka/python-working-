@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 s = "hello world hello world"
 
 # # string.replace("first symbol(s)", "second stmbol(s)", count) - функция заменяет первые указанные символы в строке
@@ -37,5 +38,15 @@ s = "hello world"
 
 if "o" in s:
     s = s.replace()
+=======
+# print(input("Введите часы и минуты: ").split("*"))
+
+a, b = map(int, input("Введите часы и минуты: ").split())
+# a = int(a)
+# b = int(b)
+print(a, ":", b)
+
+print(type(a), ":", type(b))
+>>>>>>> 607abec4b6b42fe4ab4f61e0d585a3e7b0191286
 
 
