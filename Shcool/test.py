@@ -445,5 +445,7 @@
 
 
 
-def sqrt():
-    print("Я функция sqrt из модуля test")
+variable_from_test = 100
+
+def say_hello(a):
+    print("hello", a)

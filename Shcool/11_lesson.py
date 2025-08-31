@@ -88,7 +88,8 @@ for i in range(70):
     t.circle(size)
     t.left(5)
     size+= 3
-
+print("a"-1)
+turtle.done()
 
 
   

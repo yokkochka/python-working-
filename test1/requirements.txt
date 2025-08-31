@@ -1,0 +1,11 @@
+numpy==1.23.5
+pandas
+pmdarima==1.8.5
+prophet
+yfinance
+tensorflow==2.19.0
+scikit-learn
+matplotlib
+statsmodels
+optuna
+cmdstanpy
