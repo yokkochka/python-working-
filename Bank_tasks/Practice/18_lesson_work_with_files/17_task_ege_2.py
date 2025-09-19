@@ -13,7 +13,7 @@ try:
         for i in numbers:
             if i % 100 == 24:
                 max_znach_24 = max(max_znach_24, i)
-
+        print(max_znach_24)
         for i in range(len(numbers)-2):
             troyka = [numbers[i], numbers[i + 1], numbers[i + 2]]
             count_3_znach_chislo = 0

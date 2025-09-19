@@ -1,0 +1,154 @@
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>ISO3</th>
+      <th>Year</th>
+      <th>Population</th>
+      <th>Population Growth</th>
+      <th>Growth Rate (%)</th>
+      <th>Decade</th>
+      <th>Population_3y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>1960</td>
+      <td>8996973</td>
+      <td>485782.982759</td>
+      <td>2.505003</td>
+      <td>1960s</td>
+      <td>9543205.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>1961</td>
+      <td>9169410</td>
+      <td>172437.000000</td>
+      <td>1.916611</td>
+      <td>1960s</td>
+      <td>9744781.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>1962</td>
+      <td>9351441</td>
+      <td>182031.000000</td>
+      <td>1.985199</td>
+      <td>1960s</td>
+      <td>9956320.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>1963</td>
+      <td>9543205</td>
+      <td>191764.000000</td>
+      <td>2.050636</td>
+      <td>1960s</td>
+      <td>10174836.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>1964</td>
+      <td>9744781</td>
+      <td>201576.000000</td>
+      <td>2.112246</td>
+      <td>1960s</td>
+      <td>10399926.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>1978</td>
+      <td>31269</td>
+      <td>431.000000</td>
+      <td>1.397626</td>
+      <td>1970s</td>
+      <td>33701.0</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>1979</td>
+      <td>31845</td>
+      <td>576.000000</td>
+      <td>1.842080</td>
+      <td>1970s</td>
+      <td>34968.0</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>1980</td>
+      <td>32646</td>
+      <td>801.000000</td>
+      <td>2.515309</td>
+      <td>1980s</td>
+      <td>36412.0</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>1981</td>
+      <td>33701</td>
+      <td>1055.000000</td>
+      <td>3.231636</td>
+      <td>1980s</td>
+      <td>37946.0</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>1982</td>
+      <td>34968</td>
+      <td>1267.000000</td>
+      <td>3.759532</td>
+      <td>1980s</td>
+      <td>39519.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>200 rows × 8 columns</p>
+</div>
