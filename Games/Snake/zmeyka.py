@@ -11,23 +11,23 @@ class Snake:
         self.fruit = fruit
         self.collision = False
 
-        self.head_up = pygame.image.load("images/blue_head_up.png").convert_alpha()
-        self.head_down = pygame.image.load("images/blue_head_down.png").convert_alpha()
-        self.head_left = pygame.image.load("images/blue_head_left.png").convert_alpha()
-        self.head_right = pygame.image.load("images/blue_head_right.png").convert_alpha()
+        self.head_up = pygame.image.load("images/blue_snake/head_up.png").convert_alpha()
+        self.head_down = pygame.image.load("images/blue_snake/head_down.png").convert_alpha()
+        self.head_left = pygame.image.load("images/blue_snake/head_left.png").convert_alpha()
+        self.head_right = pygame.image.load("images/blue_snake/head_right.png").convert_alpha()
 
-        self.snake_DownToLeft = pygame.image.load("images/blue_snake_DownToLeft.png").convert_alpha()
-        self.snake_DownToRight = pygame.image.load("images/blue_snake_DownToRight.png").convert_alpha()
-        self.snake_UpToLeft = pygame.image.load("images/blue_snake_UpToLeft.png").convert_alpha()
-        self.snake_UpToRight = pygame.image.load("images/blue_snake_UpToRight.png").convert_alpha()
+        self.snake_DownToLeft = pygame.image.load("images/blue_snake/snake_DownToLeft.png").convert_alpha()
+        self.snake_DownToRight = pygame.image.load("images/blue_snake/snake_DownToRight.png").convert_alpha()
+        self.snake_UpToLeft = pygame.image.load("images/blue_snake/snake_UpToLeft.png").convert_alpha()
+        self.snake_UpToRight = pygame.image.load("images/blue_snake/snake_UpToRight.png").convert_alpha()
         
-        self.snake_horizontal = pygame.image.load("images/blue_snake_horizontal.png").convert_alpha()
-        self.snake_vertical = pygame.image.load("images/blue_snake_vertical.png").convert_alpha()
+        self.snake_horizontal = pygame.image.load("images/blue_snake/snake_horizontal.png").convert_alpha()
+        self.snake_vertical = pygame.image.load("images/blue_snake/snake_vertical.png").convert_alpha()
 
-        self.tail_up = pygame.image.load("images/blue_tail_up.png").convert_alpha()
-        self.tail_down = pygame.image.load("images/blue_tail_down.png").convert_alpha()
-        self.tail_left = pygame.image.load("images/blue_tail_left.png").convert_alpha()
-        self.tail_right = pygame.image.load("images/blue_tail_right.png").convert_alpha()
+        self.tail_up = pygame.image.load("images/blue_snake/tail_up.png").convert_alpha()
+        self.tail_down = pygame.image.load("images/blue_snake/tail_down.png").convert_alpha()
+        self.tail_left = pygame.image.load("images/blue_snake/tail_left.png").convert_alpha()
+        self.tail_right = pygame.image.load("images/blue_snake/tail_right.png").convert_alpha()
         
         self.bite = pygame.mixer.Sound('music/bite.ogg')
         self.music_game_over = pygame.mixer.Sound('music/game_over.ogg')
