@@ -1,15 +1,10 @@
 
-
-
-a = "12345"
-b = "hello"
-
-for i, j in zip(a, b):
-    print(i, j)
-    
-
-
-
-
-
+num = 0
+while num < 10:
+    num += 1
+    num2 = 0
+    while num2 < 10:
+        num2 += 1
+        print(f'{num} * {num2} = {num * num2}')
+    print()
 

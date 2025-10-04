@@ -240,3 +240,27 @@
 2025-10-02 23:57:44 | INFO | attempt to access an infected file ./target_file.txt
 2025-10-02 23:57:44 | INFO | the report has been compiled
 2025-10-02 23:58:04 | INFO | the antivirus is not working correctly
+2025-10-03 14:46:13 | INFO | internet connection check has begun
+2025-10-03 14:46:13 | INFO | device is connected to the internet
+2025-10-03 14:46:13 | INFO | start checking the installed firewall
+2025-10-03 14:46:13 | INFO | start checking firewall status
+2025-10-03 14:46:13 | INFO | firewall activation check result Сеть домена: ВЫКЛЮЧИТЬ
+Частная сеть: ВЫКЛЮЧИТЬ
+Общедоступная: ВЫКЛЮЧИТЬ
+2025-10-03 14:46:14 | INFO | start checking the installed antivirus
+2025-10-03 14:46:14 | INFO | antivirus isinstalled
+2025-10-03 14:46:14 | INFO | start checking antivirus status
+2025-10-03 14:46:15 | INFO | antivirus activation check result Запущена: True
+Антишпионская защита: True
+Антивирус функционирует: True
+Защита в реальном времени: False
+
+2025-10-03 14:46:19 | INFO | antivirus scan begins
+2025-10-03 14:46:19 | INFO | file ./target_file.txt deleted successfully
+2025-10-03 14:46:19 | INFO | attempt to access an infected file ./target_file.txt
+2025-10-03 14:46:19 | ERROR | error opening infected file
+2025-10-03 14:46:39 | INFO | the antivirus is working correctly
+2025-10-03 14:46:49 | INFO | antivirus scan begins
+2025-10-03 14:46:49 | INFO | file ./target_file.txt with virus created successfully
+2025-10-03 14:46:49 | INFO | attempt to access an infected file ./target_file.txt
+2025-10-03 14:47:09 | INFO | the antivirus is not working correctly
