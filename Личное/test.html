@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Карта Москвы — Места</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #map { width: 100%; height: 100vh; }
+    .leaflet-popup-content-wrapper { font-family: system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // Центр карты — Москва
+  const map = L.map('map').setView([55.7558, 37.6173], 11);
+
+  // Тайлы OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Массив мест с координатами, названием и комментарием
+  const places = [
+    { name: 'Красная площадь', coords: [55.7539, 37.6208], comment: 'Историческое место' },
+    { name: 'Парк Зарядье', coords: [55.7499, 37.6204], comment: 'Современный парк' },
+    { name: 'Парк Горького', coords: [55.7308, 37.6036], comment: 'Популярное место отдыха' }
+  ];
+
+  // Добавляем маркеры на карту
+  places.forEach(p => {
+    L.marker(p.coords).addTo(map)
+      .bindPopup(`<strong>${p.name}</strong><br>${p.comment}`);
+  });
+</script>
+
+</body>
+</html>
