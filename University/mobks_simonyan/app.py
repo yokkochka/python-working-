@@ -238,28 +238,21 @@ frame2.pack(fill='x', pady=5, padx=5)
 
 lbl_part_2 = tk.Label(frame2, text="Проверка антивирусного ПО", font=FONT)
 lbl_part_2.grid(row=0, column=0, sticky='w', pady=5)
-
 btn_check_installed_antivirus = tk.Button(frame2, text="Проверка наличия установленного антивируса", \
                                           command = function_check_installed_antivirus)
 btn_check_installed_antivirus.grid(row=1, column=0, sticky='ew', pady=2)
-
 btn_check_antivirus = tk.Button(frame2, text="Проверка работоспособности антивирусного ПО", \
                                 command = function_check_antivirus)
 btn_check_antivirus.grid(row=2, column=0, sticky='ew', pady=2)
-
 btn_test_antivirus = tk.Button(frame2, text="Тестирование антивирусного ПО", command = function_test_antivirus)
 btn_test_antivirus.grid(row=3, column=0, sticky='ew', pady=2)
-
 lbl_check_installed_antivirus = tk.Label(frame2, textvariable=check_installed_antivirus, bd=1, relief=tk.SUNKEN, width=40, \
                                          background='white')
 lbl_check_installed_antivirus.grid(row=1, column=1, padx=10, pady=2, sticky='ew')
-
 lbl_check_antivirus = tk.Label(frame2, textvariable=check_antivirus, bd=1, relief=tk.SUNKEN, width=40, background='white')
 lbl_check_antivirus.grid(row=2, column=1, padx=10, pady=2, sticky='ew')
-
 lbl_test_antivirus = tk.Label(frame2, textvariable=test_antivirus, bd=1, relief=tk.SUNKEN, width=40, background='white')
 lbl_test_antivirus.grid(row=3, column=1, padx=10, pady=2, sticky='ew')
-
 frame2.grid_columnconfigure(0, weight=1)
 frame2.grid_columnconfigure(1, weight=1)
 
