@@ -12,8 +12,6 @@ def calculate_mse(original_wav, stego_wav):
 
     return mse
 
-
-
 def calculate_nmse(original_wav, stego_wav):
 
     orig_data, _, _, _, _ = wav.read_wav_amplitudes(original_wav)

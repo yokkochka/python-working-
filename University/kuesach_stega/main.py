@@ -26,7 +26,6 @@ def print_symbol_bits(text, bits):
         print(f"{i} -> {j}")
 
 
-
 def main():
     wav_file = 'b.wav'
     stego_file = 'stego.wav'
@@ -42,24 +41,27 @@ def main():
     print_symbol_bits(secret_text, bytes_secret_text)
 
     num_bits = len(bytes_secret_text)
-
     print(f"Количество бит для встраивания: {num_bits}")
 
     channels, sample_rate, bits_per_sample, n_frames = wav.analyze_wav(wav_file)
 
-    # wav.plot_oscillogram_vertical(wav_file, title="Осциллограмма до встраивания")
+    if n_frames < num_bits:
+        raise ValueError("Недостаточно места, встраивание невозможно")
+    else:
+        print("\nДостаточно места для встраивания")
+
+    wav.plot_oscillogram_vertical(wav_file, title="Осциллограмма до встраивания")
+    wav.plot_spectrogram_vertical(wav_file, title="Спектограмма до встраивания")
 
     wav.embed_lsb_left_channel(wav_file, stego_file, bytes_secret_text)
-
     extracted = wav.extract_lsb_left_channel(stego_file, num_bits)
     print("Извлеченный текст:", extracted)
 
-    # wav.plot_oscillogram_vertical(wav_file, title="Осциллограмма до встраивания")
+    wav.plot_oscillogram_vertical(stego_file, title="Осциллограмма после встраивания")
+    wav.plot_spectrogram_vertical(stego_file, title="Спектограмма после встраивания")
 
     print("\n-----------Оценки-----------\n")
-
     print(f"Среднеквадратическая ошибка (MSE): {fin.calculate_mse(wav_file, stego_file)}")
-
     print(f"\nНормированная среднеквадратическая ошибка (NMSE): {fin.calculate_nmse(wav_file, stego_file)}")
 
 if __name__ == "__main__":

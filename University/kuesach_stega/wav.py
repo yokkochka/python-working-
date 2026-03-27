@@ -1,6 +1,7 @@
 import wave
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.signal import spectrogram
 
 def analyze_wav(wav_file):
     with wave.open(wav_file, 'rb') as wav:
@@ -22,32 +23,6 @@ def analyze_wav(wav_file):
     # print(f"Количество отсчетов: {n_frames}")
 
     return info
-
-
-# def read_wav_amplitudes(wav_file):
-#     with wave.open(wav_file, 'rb') as wav:
-#         n_channels = wav.getnchannels()
-#         sample_rate = wav.getframerate()
-#         n_frames = wav.getnframes()
-#         sample_width = wav.getsampwidth()
-#         raw_bytes = wav.readframes(n_frames)
-
-#         if sample_width == 1:
-#             dtype = np.uint8
-#         elif sample_width == 2:
-#             dtype = np.int16
-#         else:
-#             raise ValueError("Unsupported sample width")
-
-#         audio_data = np.frombuffer(raw_bytes, dtype=dtype)
-
-#         if n_channels > 1:
-#             audio_data = audio_data.reshape(-1, n_channels)
-
-#         t = np.arange(n_frames) / sample_rate
-
-#     return audio_data, t, n_channels, sample_rate, sample_width
-
 
 def read_wav_amplitudes(wav_file):
     with wave.open(wav_file, 'rb') as wav:
@@ -73,7 +48,6 @@ def read_wav_amplitudes(wav_file):
 
     return audio_data, t, n_channels, sample_rate, sample_width
 
-
 def plot_oscillogram_vertical(wav_file, title="Осциллограмма"):
     audio_data, t, n_channels, sample_rate, sample_width = read_wav_amplitudes(wav_file)
     
@@ -92,19 +66,12 @@ def plot_oscillogram_vertical(wav_file, title="Осциллограмма"):
     plt.tight_layout()
     plt.show()
 
-
-
-
 def embed_lsb_left_channel(wav_in, wav_out, bit_string):
-    """
-    Встраивание битовой строки в WAV только в левый канал через LSB
-    """
+
     audio_data, t, n_channels, sample_rate, sample_width = read_wav_amplitudes(wav_in)
     
     if n_channels < 1:
         raise ValueError("Файл должен содержать хотя бы 1 канал")
-    
-    
     
     left = audio_data[:, 0].copy()  
     n_frames = left.size
@@ -115,21 +82,12 @@ def embed_lsb_left_channel(wav_in, wav_out, bit_string):
     print(f"Количество бит для скрытия: {num_bits}")
     print(f"Размер сегмента: {segment_size} отсчетов на 1 бит")
 
-    if n_frames < num_bits:
-        raise ValueError("Недостаточно места, встраивание невозможно")
-        return 
-    else:
-        print("\nДостаточно места для встраивания")
-
-    # Встраиваем LSB только в левый канал
     for i in range(num_bits):
         index = i * segment_size + segment_size // 2
         left[index] = np.int16((left[index] & ~1) | int(bit_string[i]))
-    
-    # Возвращаем левый канал на место
+
     audio_data[:, 0] = left
 
-    # Сохраняем стего-файл
     with wave.open(wav_out, 'wb') as out:
         out.setnchannels(n_channels)
         out.setsampwidth(sample_width)
@@ -150,9 +108,8 @@ def extract_lsb_left_channel(wav_file, num_bits):
     bits = ''
     for i in range(num_bits):
         index = i * segment_size + segment_size // 2
-        bits += str(left[index] & 1)  # берем LSB
+        bits += str(left[index] & 1) 
 
-    # Преобразуем биты в текст
     bytes_list = []
     for i in range(0, len(bits), 8):
         byte = bits[i:i+8]
@@ -160,3 +117,26 @@ def extract_lsb_left_channel(wav_file, num_bits):
     
     secret_text = bytes(bytes_list).decode('cp1251')
     return secret_text
+
+
+def plot_spectrogram_vertical(wav_file, title="Спектрограмма"):
+    audio_data, t, n_channels, sample_rate, sample_width = read_wav_amplitudes(wav_file)
+    fig, axes = plt.subplots(n_channels, 1, figsize=(12, 3*n_channels), sharex=True)
+    if n_channels == 1:
+        axes = [axes]
+
+    for ch in range(n_channels):
+        channel_data = audio_data[:, ch] if n_channels > 1 else audio_data
+        
+        f, tt, Sxx = spectrogram(channel_data, fs=sample_rate, nperseg=1024, noverlap=512)
+        Sxx_dB = 10 * np.log10(Sxx + 1e-12)
+        
+        im = axes[ch].pcolormesh(tt, f, Sxx_dB, shading='gouraud', cmap='viridis')
+        axes[ch].set_ylabel("Частота, Гц")
+        axes[ch].set_title(f"{title} - Канал {ch+1}")
+        axes[ch].set_ylim(0, sample_rate // 2)
+        fig.colorbar(im, ax=axes[ch], format='%+2.0f dB')
+
+    axes[-1].set_xlabel("Время, с")
+    plt.tight_layout()
+    plt.show()
