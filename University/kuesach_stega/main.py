@@ -1,5 +1,6 @@
 import wav
 import fin
+import dop
 
 def read_text(filename):
     with open(filename, 'r', encoding='utf-8') as f:
@@ -63,6 +64,8 @@ def main():
     print("\n-----------Оценки-----------\n")
     print(f"Среднеквадратическая ошибка (MSE): {fin.calculate_mse(wav_file, stego_file)}")
     print(f"\nНормированная среднеквадратическая ошибка (NMSE): {fin.calculate_nmse(wav_file, stego_file)}")
+
+    dop.show_segment_embedding(wav_file, stego_file, bytes_secret_text, window=2)
 
 if __name__ == "__main__":
     main()
